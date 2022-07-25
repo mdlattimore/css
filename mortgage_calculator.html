@@ -44,11 +44,7 @@
             border-radius: 5px;
             background-color: white;
         }
-        #wrapper {
-            width: 80%;
-            margin-left: auto;
-            margin-right: auto;
-        }
+
  
     </style>
     <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
@@ -112,8 +108,8 @@
                     p_and_i = monthly_payment(l, i, term)
                     total_payment = p_and_i + round(taxes/12, 2) + round(insurance/12, 2)
                     Element('pandi').write(f"Principal and Interest: ${p_and_i:.2f}")
-                    Element('prop_taxes').write(f"Taxes: ${round(taxes/12, 2)}")
-                    Element('hoi').write(f"Insurance: ${round(insurance/12, 2)}")
+                    Element('prop_taxes').write(f"Taxes: ${round(taxes/12, 2):.2f}")
+                    Element('hoi').write(f"Insurance: ${round(insurance/12, 2):.2f}")
                     Element('total_pmt').write(f"Total Payment: ${total_payment:.2f}")
 
                     console.log("Hey")
